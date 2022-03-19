@@ -13,7 +13,7 @@ Na samym początku chciałbym poinformować, iż wszystkie rawdaty znajdujące s
 ### **Schemat:**
 `Data oraz Godzina - Nazwa komendy - Wprowadzone/zedytowane/usunięte rzeczy`
 ### **Przykład**
-<p>`19.03.2022 / 21:33 - UserInfo - Wprowadzono datę utworzenia konta`,</p>
+`19.03.2022 / 21:33 - UserInfo - Wprowadzono datę utworzenia konta`,
 `19.03.2022 / 21:34 - ServerInfo - Zedytowano treść embed'a`,
 `19.03.2022 / 21:35 - BotInfo - Usunięto informację o wersji bota`,
 `...`
