@@ -15,7 +15,9 @@ Każda z tych rawdat jest w 100% darmowa. Wystarczy wejść w wybrany przez sieb
 *Gotowe!*
 
 # Aktualizacje
-2
+Wszystkie komendy (RawDaty) są na bieżąco udoskonalane i poprawiane, aby miały jak najmniej błędów i niedociągnieć. Każda nowa, mniejsza czy większa
+aktualizacja jest zapisywana w tym pliku na dole, dzięki czemu każdy, odwiedzający tego GitHuba użytkownik, będzie miał podgląd, kiedy komenda została
+zaktualizowana.
 
 # Ostatnia aktualizacja
 ### **Schemat:**
