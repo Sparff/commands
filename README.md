@@ -10,5 +10,5 @@ Na samym początku chciałbym poinformować, iż wszystkie rawdaty znajdujące s
 2
 
 # Ostatnia aktualizacja
-**Schemat:**
+## **Schemat:**
 `Nazwa komendy - Data oraz Godzina - Wprowadzone/zeedytowane/usunięte rzeczy`
