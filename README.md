@@ -7,9 +7,9 @@ Na samym początku chciałbym poinformować, iż wszystkie rawdaty znajdujące s
 Każda z tych rawdat jest w 100% darmowa. Wystarczy wejść w wybrany przez siebie plik i wgrać ją do programu!
 
 # Spis Komend:
-● `XYZ`,
-● `XYZ`,
-● `XYZ`,
+● `XYZ`,                                                                                                                                            
+● `XYZ`,                                                                                                                              
+● `XYZ`,                                                                                                                                  
 
 # Wgrywanie rawdaty
 1. Stwórz nową komendę,                                                                                                                             
