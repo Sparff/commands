@@ -4,4 +4,11 @@ Na samym początku chciałbym poinformować, iż wszystkie rawdaty znajdujące s
 `Sparf#0007`
 
 # RawDaty
-Jol
+1
+
+# Aktualizacje
+2
+
+# Ostatnia aktualizacja
+**Schemat:**
+`Nazwa komendy - Data oraz Godzina - Wprowadzone/zeedytowane/usunięte rzeczy`
