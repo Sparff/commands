@@ -1,0 +1,246 @@
+{
+  "name": "covid",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "OmKut",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://corona.lmao.ninja/v3/covid-19/countries/${slashParams(\"kraj\")}",
+      "path": "cases",
+      "storage": "1",
+      "varName": "lacznie",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://corona.lmao.ninja/v3/covid-19/countries/${slashParams(\"kraj\")}",
+      "path": "todayCases",
+      "storage": "1",
+      "varName": "dzis",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://corona.lmao.ninja/v3/covid-19/countries/${slashParams(\"kraj\")}",
+      "path": "deaths",
+      "storage": "1",
+      "varName": "laczniesmierci",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://corona.lmao.ninja/v3/covid-19/countries/${slashParams(\"kraj\")}",
+      "path": "todayDeaths",
+      "storage": "1",
+      "varName": "smiercidzis",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://corona.lmao.ninja/v3/covid-19/countries/${slashParams(\"kraj\")}",
+      "path": "recovered",
+      "storage": "1",
+      "varName": "wyzdrowialychlacznie",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://corona.lmao.ninja/v3/covid-19/countries/${slashParams(\"kraj\")}",
+      "path": "todayRecovered",
+      "storage": "1",
+      "varName": "wyzdrowialychdzis",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://corona.lmao.ninja/v3/covid-19/countries/${slashParams(\"kraj\")}",
+      "path": "critical",
+      "storage": "1",
+      "varName": "wstaniekrytycznym",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://corona.lmao.ninja/v3/covid-19/countries/${slashParams(\"kraj\")}",
+      "path": "tests",
+      "storage": "1",
+      "varName": "laczniewykonanychtestow",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://corona.lmao.ninja/v3/covid-19/countries/${slashParams(\"kraj\")}",
+      "path": "population",
+      "storage": "1",
+      "varName": "populacja",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Beep, boop! Przesyłam informacje na temat covida!",
+          "url": "",
+          "color": "#5864f2",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"avatar\")}",
+          "description": "```\nPomyślnie wygenerowałem informację!\n\nZobaczysz je poniżej!\n```",
+          "fields": [
+            {
+              "name": "● Kraj:",
+              "value": "${slashParams(\"kraj\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● Ilość łącznych zakażeń:",
+              "value": "${tempVars(\"lacznie\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● Ilość dzisiejszych zakażeń:",
+              "value": "${tempVars(\"dzis\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● Ilość łącznych zgonów:",
+              "value": "${tempVars(\"laczniesmierci\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● Ilość dzisiejszych zgonów:",
+              "value": "${tempVars(\"laczniesmierci\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● Ilość wyzdrowiałych osób:",
+              "value": "${tempVars(\"wyzdrowialychlacznie\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● Ilość dzisiejszych, wyzdrowiałych osób:",
+              "value": "${tempVars(\"wyzdrowialychdzis\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● Ilość osób w stanie krytycznym:",
+              "value": "${tempVars(\"wstaniekrytycznym\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● Ilość łącznie wykonanych testów:",
+              "value": "${tempVars(\"laczniewykonanychtestow\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● Liczba całej populacji:",
+              "value": "${tempVars(\"populacja\")}",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "kraj",
+      "description": "Wybierz kraj np. poland, england itd.",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Zobacz informację o COVID-19 w danym kraju!"
+}
