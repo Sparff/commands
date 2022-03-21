@@ -1,0 +1,343 @@
+{
+  "name": "okradnij",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "oXMxv",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "random-teksty",
+      "min": "1",
+      "max": "5",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "skradziona-gotowka",
+      "min": "30",
+      "max": "300",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "random-teksty",
+      "comparison": "1",
+      "value": "'1'",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "12"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "random-teksty",
+      "comparison": "1",
+      "value": "'2'",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "15"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "random-teksty",
+      "comparison": "1",
+      "value": "'3'",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "18"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "random-teksty",
+      "comparison": "1",
+      "value": "'4'",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "21"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "random-teksty",
+      "comparison": "1",
+      "value": "'5'",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "24"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "zarobione-pieniadze",
+      "changeType": "1",
+      "value": "tempVars(\"skradziona-gotowka\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Sukces!",
+          "url": "",
+          "color": "#5864f2",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "https://i.imgur.com/pk71B2c.png",
+          "description": "```\nOkradłeś pobliski sklep i wyniosłeś z niego aż ${tempVars(\"skradziona-gotowka\")} PLN!\n```",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "zarobione-pieniadze",
+      "changeType": "1",
+      "value": "-tempVars(\"skradziona-gotowka\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Przykro mi!",
+          "url": "",
+          "color": "#ed4245",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "https://i.imgur.com/pk71B2c.png",
+          "description": "```\nPróbowałeś ukraść starszej Pani torebke, lecz złapała Cię policja i musiałeś zapłacić mandat w wysokości ${tempVars(\"skradziona-gotowka\")} PLN!\n```",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "zarobione-pieniadze",
+      "changeType": "1",
+      "value": "-tempVars(\"skradziona-gotowka\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Przykro mi!",
+          "url": "",
+          "color": "#ed4245",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "https://i.imgur.com/pk71B2c.png",
+          "description": "```\nZłapała Cię policja i zapłaciłeś łapówkę w wysokości ${tempVars(\"skradziona-gotowka\")} PLN!\n```",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "zarobione-pieniadze",
+      "changeType": "1",
+      "value": "tempVars(\"skradziona-gotowka\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Twardziel z ciebie!",
+          "url": "",
+          "color": "#5864f2",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "https://i.imgur.com/pk71B2c.png",
+          "description": "```\nUkradłeś osiedlowemu zbójowi saszetkę, w której był telefon. Wyceniono go na ${tempVars(\"skradziona-gotowka\")} PLN!\n```",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "zarobione-pieniadze",
+      "changeType": "1",
+      "value": "-tempVars(\"skradziona-gotowka\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Przykro mi!",
+          "url": "",
+          "color": "#ed4245",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "https://i.imgur.com/pk71B2c.png",
+          "description": "```\nPodczas imprezy w klubie, ukradziono Ci portfel. Straciłeś ${tempVars(\"skradziona-gotowka\")} PLN!\n```",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "comType": "4",
+  "description": "Spróbuj popełnić przestępstwo!",
+  "_timeRestriction": 30
+}
