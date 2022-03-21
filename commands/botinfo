@@ -1,0 +1,429 @@
+{
+  "name": "botinfo",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "AUESM",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "23",
+      "storage": "1",
+      "varName2": "uptime-day",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "24",
+      "storage": "1",
+      "varName2": "uptime-hour",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "25",
+      "storage": "1",
+      "varName2": "uptime-minuts",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "26",
+      "storage": "1",
+      "varName2": "uptime-second",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "21",
+      "storage": "1",
+      "varName2": "djs-version",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "31",
+      "storage": "1",
+      "varName2": "njs-version",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "19",
+      "storage": "1",
+      "varName2": "bot-prefix",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "3",
+      "storage": "1",
+      "varName2": "amount-servers",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "4",
+      "storage": "1",
+      "varName2": "amount-users",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "10",
+      "storage": "1",
+      "varName2": "amount-channels",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "36",
+      "storage": "1",
+      "varName2": "memory-gb",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "5",
+      "storage": "1",
+      "varName2": "ping",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Beep, boop!",
+          "url": "",
+          "color": "#5864f2",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "**Poczekaj chwilę!**\n> Wyszukuję informacji na mój temat.\n*Nie powinno to trwać więcej niż minutę!*",
+          "fields": [],
+          "author": "${tempVars(\"username\")}",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"avatar\")}",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "embed-edit",
+      "name": "Send Message"
+    },
+    {
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Beep, boop!",
+          "url": "",
+          "color": "#5864f2",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "**Poczekaj chwilę!**\n> 13%\n*Nie powinno to trwać więcej niż minutę!*",
+          "fields": [],
+          "author": "${tempVars(\"username\")}",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"avatar\")}",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "1",
+      "editMessageVarName": "embed-edit",
+      "storage": "0",
+      "varName2": "embed-edit",
+      "name": "Send Message"
+    },
+    {
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Beep, boop!",
+          "url": "",
+          "color": "#5864f2",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "**Poczekaj chwilę!**\n> 57%\n*Nie powinno to trwać więcej niż minutę!*",
+          "fields": [],
+          "author": "${tempVars(\"username\")}",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"avatar\")}",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "1",
+      "editMessageVarName": "embed-edit",
+      "storage": "0",
+      "varName2": "embed-edit",
+      "name": "Send Message"
+    },
+    {
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Beep, boop!",
+          "url": "",
+          "color": "#5864f2",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "**Poczekaj chwilę!**\n> 94%\n*Nie powinno to trwać więcej niż minutę!*",
+          "fields": [],
+          "author": "${tempVars(\"username\")}",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"avatar\")}",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "1",
+      "editMessageVarName": "embed-edit",
+      "storage": "0",
+      "varName2": "embed-edit",
+      "name": "Send Message"
+    },
+    {
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Beep, boop!",
+          "url": "",
+          "color": "#5864f2",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "**Poczekaj chwilę!**\n> 100%\n*Nie powinno to trwać więcej niż minutę!*",
+          "fields": [],
+          "author": "${tempVars(\"username\")}",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"avatar\")}",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "1",
+      "editMessageVarName": "embed-edit",
+      "storage": "0",
+      "varName2": "embed-edit",
+      "name": "Send Message"
+    },
+    {
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Beep, boop!",
+          "url": "",
+          "color": "#5864f2",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "> Gotowe!\n~~ *Nie powinno to trwać więcej niż minutę!* ~~",
+          "fields": [],
+          "author": "${tempVars(\"username\")}",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"avatar\")}",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "1",
+      "editMessageVarName": "embed-edit",
+      "storage": "0",
+      "varName2": "embed-edit",
+      "name": "Send Message"
+    },
+    {
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Beep, boop! Patrz co przygotowałem!",
+          "url": "",
+          "color": "#5864f2",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "",
+          "fields": [
+            {
+              "name": "Czas działania:",
+              "value": "``` ${tempVars(\"uptime-day\")}:${tempVars(\"uptime-hour\")}:${tempVars(\"uptime-minuts\")}:${tempVars(\"uptime-second\")} ```",
+              "inline": "true"
+            },
+            {
+              "name": "Wersja Discord.JS:",
+              "value": "``` ${tempVars(\"djs-version\")} ```",
+              "inline": "true"
+            },
+            {
+              "name": "Wersja NodeJS:",
+              "value": "``` ${tempVars(\"njs-version\")} ```",
+              "inline": "true"
+            },
+            {
+              "name": "Pamięc:",
+              "value": "``` ${tempVars(\"memory-gb\")} GB ```",
+              "inline": "true"
+            },
+            {
+              "name": "Ping:",
+              "value": "``` ${tempVars(\"ping\")} MS ```",
+              "inline": "true"
+            },
+            {
+              "name": "Obecny prefix:",
+              "value": "``` ${tempVars(\"bot-prefix\")} ```",
+              "inline": "true"
+            },
+            {
+              "name": "Liczba serwerów:",
+              "value": "``` ${tempVars(\"amount-servers\")} ```",
+              "inline": "true"
+            },
+            {
+              "name": "Liczba użytkowników:",
+              "value": "``` ${tempVars(\"amount-users\")} ```",
+              "inline": "true"
+            },
+            {
+              "name": "Liczba kanałów:",
+              "value": "``` ${tempVars(\"amount-channels\")} ```",
+              "inline": "true"
+            }
+          ],
+          "author": "${tempVars(\"username\")}",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"avatar\")}",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "1",
+      "editMessageVarName": "embed-edit",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Zobacz informacje o swoim bocie!",
+  "parameters": []
+}
