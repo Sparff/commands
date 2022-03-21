@@ -1,0 +1,187 @@
+{
+  "name": "ping",
+  "permissions": "NONE",
+  "permissions2": "SEND_MESSAGES",
+  "restriction": "4",
+  "_id": "aVpPr",
+  "actions": [
+    {
+      "info": "5",
+      "storage": "1",
+      "varName2": "ping",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "ping",
+      "comparison": "3",
+      "value": "200",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "8"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Ping, pong!",
+          "url": "",
+          "color": "GREEN",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"avatar\")}",
+          "description": "Ping bota wynosi `${tempVars(\"ping\")}` Milisekund!",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "ping",
+      "comparison": "3",
+      "value": "300",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "11"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Ping, pong!",
+          "url": "",
+          "color": "ORANGE",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"avatar\")}",
+          "description": "Ping bota wynosi `${tempVars(\"ping\")}` Milisekund!",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "ping",
+      "comparison": "4",
+      "value": "300",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "1"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Ping, pong!",
+          "url": "",
+          "color": "RED",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"avatar\")}",
+          "description": "Ping bota wynosi `${tempVars(\"ping\")}` Milisekund!",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Pokazuje aktualny ping bota!"
+}
