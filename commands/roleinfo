@@ -1,0 +1,272 @@
+{
+  "name": "roleinfo",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "rdqIn",
+  "actions": [
+    {
+      "role": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "nazwa_roli",
+      "name": "Store Role Info"
+    },
+    {
+      "role": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id_roli",
+      "name": "Store Role Info"
+    },
+    {
+      "role": "0",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "kolor_roli",
+      "name": "Store Role Info"
+    },
+    {
+      "role": "0",
+      "varName": "",
+      "info": "10",
+      "storage": "1",
+      "varName2": "data_stworzenia_roli",
+      "name": "Store Role Info"
+    },
+    {
+      "sourceDate": "${tempVars(\"data_stworzenia_roli\")}",
+      "dateLanguage": "\"pl\"",
+      "modeStorage": "0",
+      "info": "1",
+      "buildInput": "",
+      "storage": "1",
+      "varName": "day",
+      "name": "Store Date Info Plus"
+    },
+    {
+      "sourceDate": "${tempVars(\"data_stworzenia_roli\")}",
+      "dateLanguage": "\"pl\"",
+      "modeStorage": "0",
+      "info": "5",
+      "buildInput": "",
+      "storage": "1",
+      "varName": "month",
+      "name": "Store Date Info Plus"
+    },
+    {
+      "sourceDate": "${tempVars(\"data_stworzenia_roli\")}",
+      "dateLanguage": "\"pl\"",
+      "modeStorage": "0",
+      "info": "6",
+      "buildInput": "",
+      "storage": "1",
+      "varName": "yeaar",
+      "name": "Store Date Info Plus"
+    },
+    {
+      "sourceDate": "${tempVars(\"data_stworzenia_roli\")}",
+      "dateLanguage": "\"pl\"",
+      "modeStorage": "0",
+      "info": "12",
+      "buildInput": "",
+      "storage": "1",
+      "varName": "unix",
+      "name": "Store Date Info Plus"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "globalban",
+      "comparison": "1",
+      "value": "1",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "15"
+      },
+      "name": "Check Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "<:jin_zle:922394210773127198> Próba nie powiodła się!",
+          "url": "",
+          "color": "#ed4245",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"avatar\")}",
+          "description": "Niestety, nie możesz użyć komendy, ponieważ posiadasz globalną blokadę na używanie komend!",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "1",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "18"
+      },
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "<:jin_zle:922394210773127198> Próba nie powiodła się!",
+          "url": "",
+          "color": "#ed4245",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"avatar\")}",
+          "description": "Niestety, nie użyłeś niektórych parametrów.\nPoprawny format to: `.roleinfo <@rola>`!",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "<:jin_mention:922950396576669766> Sukces!",
+          "url": "",
+          "color": "#5865f2",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"avatar\")}",
+          "description": "```\nPomyślnie wygenerowano informacje o wskazanej przez ciebie roli.\n\nWięcej informacji znajdziesz poniżej:\n```",
+          "fields": [
+            {
+              "name": "● Nazwa roli:",
+              "value": "${tempVars(\"nazwa_roli\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● ID roli:",
+              "value": "${tempVars(\"id_roli\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● Kolor roli (hex):",
+              "value": "${tempVars(\"kolor_roli\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● Data stworzenia roli:",
+              "value": "${tempVars(\"day\")}.${tempVars(\"month\")}.${tempVars(\"yeaar\")} (<t:${tempVars(\"unix\")}:R>)",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Pokazuje najważniejsze informacje o danej roli!",
+  "parameters": [
+    {
+      "name": "rola",
+      "description": "Rola, o której mają wyskoczyć informacje!",
+      "type": "ROLE",
+      "required": true,
+      "choices": null
+    }
+  ]
+}
