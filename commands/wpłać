@@ -1,0 +1,321 @@
+{
+  "name": "wpłać",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "HvLaR",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "zarobione-pieniadze",
+      "comparison": "3",
+      "value": "slashParams(\"ilosc\")",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "9"
+      },
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "zarobione-pieniadze",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "ilosc-gotowki",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "bank",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "bank",
+      "name": "Store Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Beep, boop! Co zawiodło?",
+          "url": "",
+          "color": "#ed4245",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "https://i.imgur.com/pk71B2c.png",
+          "description": "```\nNiestety, nie posiadasz tyle gotówki w portfelu!\n```",
+          "fields": [
+            {
+              "name": "Obecny stan gotówki:",
+              "value": "> ` ${tempVars(\"ilosc-gotowki\")} PLN `",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "4",
+      "varName": "ilosc",
+      "comparison": "3",
+      "value": "1",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "12"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Beep, boop! Co ty sobie myślisz?",
+          "url": "",
+          "color": "#ed4245",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "https://i.imgur.com/pk71B2c.png",
+          "description": "```\nNiestety, nie możesz wpłacić kwoty, mniejszeni niż 1 PLN!\n```",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [
+        {
+          "name": "Tak",
+          "type": "SUCCESS",
+          "id": "msg-button-5dfdb62",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSONAL",
+          "time": "",
+          "actions": [
+            {
+              "member": "1",
+              "varName": "",
+              "dataName": "zarobione-pieniadze",
+              "changeType": "1",
+              "value": "-slashParams(\"ilosc\")",
+              "name": "Control Member Data"
+            },
+            {
+              "member": "1",
+              "varName": "",
+              "dataName": "bank",
+              "changeType": "1",
+              "value": "slashParams(\"ilosc\")",
+              "name": "Control Member Data"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Beep, boop! Brawo!",
+                  "url": "",
+                  "color": "#5864f2",
+                  "timestamp": "true",
+                  "imageUrl": "",
+                  "thumbUrl": "https://i.imgur.com/pk71B2c.png",
+                  "description": "```\nPoprawnie wpłaciłeś pieniądze do banku!\n```",
+                  "fields": [
+                    {
+                      "name": "Wpłacona gotówka:",
+                      "value": "> ` ${slashParams(\"ilosc\")} PLN `",
+                      "inline": "false"
+                    }
+                  ],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+                  "footerIconUrl": "${tempVars(\"avatar\")}"
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "embed-zapytanie",
+              "type": "allButtons",
+              "disable": "disable",
+              "searchValue": "",
+              "name": "Disable Buttons and Selects"
+            }
+          ]
+        },
+        {
+          "name": "Nie",
+          "type": "DANGER",
+          "id": "msg-button-3dc77a0",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSONAL",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Rozumiano! Ale pamiętaj, że zawsze jestem do dyspozycji!",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": true,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "embed-zapytanie",
+              "type": "allButtons",
+              "disable": "disable",
+              "searchValue": "",
+              "name": "Disable Buttons and Selects"
+            }
+          ]
+        }
+      ],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Beep, boop! Na pewno?",
+          "url": "",
+          "color": "#5864f2",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "https://i.imgur.com/pk71B2c.png",
+          "description": "```\nCzy na pewno chcesz wpłacić pieniądze do banku?\n```",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "embed-zapytanie",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "ilosc",
+      "description": "Ile chcesz wpłacić pieniędzy?",
+      "type": "NUMBER",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Wpłać swoje pieniądze do banku!"
+}
