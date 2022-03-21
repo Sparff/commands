@@ -1,0 +1,241 @@
+{
+  "name": "wpłać-wszystko",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "mrfxN",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "zarobione-pieniadze",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "hajs-w-gotowce",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "zarobione-pieniadze",
+      "comparison": "3",
+      "value": "1",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "8"
+      },
+      "name": "Check Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Beep, boop! Meh...",
+          "url": "",
+          "color": "#ed4245",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"avatar\")}",
+          "description": "```\nNiestety, nie posiadasz tyle gotówki, aby móc wpłacić ją do banku!\n```",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [
+        {
+          "name": "Tak",
+          "type": "SUCCESS",
+          "id": "msg-button-b2946b8",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSONAL",
+          "time": "",
+          "actions": [
+            {
+              "member": "1",
+              "varName": "",
+              "dataName": "bank",
+              "changeType": "1",
+              "value": "tempVars(\"hajs-w-gotowce\")",
+              "name": "Control Member Data"
+            },
+            {
+              "member": "1",
+              "varName": "",
+              "dataName": "zarobione-pieniadze",
+              "changeType": "1",
+              "value": "-tempVars(\"hajs-w-gotowce\")",
+              "name": "Control Member Data"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Beep, boop! Super!",
+                  "url": "",
+                  "color": "#5864f2",
+                  "timestamp": "true",
+                  "imageUrl": "",
+                  "thumbUrl": "https://i.imgur.com/pk71B2c.png",
+                  "description": "```\nPomyślnie wpłaciłeś całą gotówkę do banku!\n```",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+                  "footerIconUrl": "${tempVars(\"avatar\")}"
+                }
+              ],
+              "reply": true,
+              "ephemeral": true,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "embeddd",
+              "type": "allButtons",
+              "disable": "disable",
+              "searchValue": "",
+              "name": "Disable Buttons and Selects"
+            }
+          ]
+        },
+        {
+          "name": "Nie",
+          "type": "DANGER",
+          "id": "msg-button-4fcd846",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSONAL",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Spoko, ale jeżeli będzie taka potrzeba, to nie wahaj się!",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": true,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "embeddd",
+              "type": "allButtons",
+              "disable": "disable",
+              "searchValue": "",
+              "name": "Disable Buttons and Selects"
+            }
+          ]
+        }
+      ],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Beep, boop! Zwolnij...",
+          "url": "",
+          "color": "#5864f2",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "https://i.imgur.com/pk71B2c.png",
+          "description": "```\nCzy na pewno chcesz wpłacić całą gotówkę do banku?\n```",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "embeddd",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Wpłać całą gotówkę do banku!"
+}
