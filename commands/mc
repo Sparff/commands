@@ -1,0 +1,215 @@
+{
+  "name": "mc",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "trKAb",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "text",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "1",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "8"
+      },
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Błąd!",
+          "url": "",
+          "color": "#ed4245",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"avatar\")}",
+          "description": "Niestety, nie użyłeś niektórych parametrów.\nPoprawny format to: `.mc <treść>`!",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "tempVars(\"text\").replace(\" \",\"+\")",
+      "storage": "1",
+      "varName": "done",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "tempVars(\"done\").replace(\" \",\"+\")",
+      "storage": "1",
+      "varName": "done1",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "tempVars(\"done1\").replace(\" \",\"+\")",
+      "storage": "1",
+      "varName": "done2",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "tempVars(\"done2\").replace(\" \",\"+\")",
+      "storage": "1",
+      "varName": "done3",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "tempVars(\"done3\").replace(\" \",\"+\")",
+      "storage": "1",
+      "varName": "done4",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "tempVars(\"done4\").replace(\" \",\"+\")",
+      "storage": "1",
+      "varName": "done5",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "tempVars(\"done5\").replace(\" \",\"+\")",
+      "storage": "1",
+      "varName": "done6",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "tempVars(\"done6\").replace(\" \",\"+\")",
+      "storage": "1",
+      "varName": "done7",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "tempVars(\"done7\").replace(\" \",\"+\")",
+      "storage": "1",
+      "varName": "done8",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "tempVars(\"done8\").replace(\" \",\"+\")",
+      "storage": "1",
+      "varName": "done9",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "tempVars(\"done9\").replace(\" \",\"+\")",
+      "storage": "1",
+      "varName": "done10",
+      "name": "Run Script"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Achievement get ziom!",
+          "url": "",
+          "color": "RANDOM",
+          "timestamp": "true",
+          "imageUrl": "https://www.minecraftskinstealer.com/achievement/a.php?i=1&h=Achievement+Get%21&t=${tempVars(\"done10\")}",
+          "thumbUrl": "",
+          "description": "",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "_aliases": [
+    "minecraft"
+  ],
+  "comType": "0"
+}
