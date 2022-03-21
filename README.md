@@ -66,6 +66,9 @@ Jeżeli chciałbyś otrzymać RawDatę, której nie ma tutaj wejdź na serwer Di
 52. ● `Reps`,                                                                                                                                  
 53. ● `Invite Create`,                                                                                                                                  
 54. ● `Invite Delete`,                                                                                                                                  
+55. ● `Start Streaming`,                                                                                                                                  
+56. ● `Stop Streaming`,                                                                                                                                  
+57. ● `Move Member`,                                                                                                                                  
                                                                                                                              
 # Wgrywanie rawdaty
 1. Stwórz nową komendę,                                                                                                                             
