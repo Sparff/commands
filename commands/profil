@@ -1,0 +1,213 @@
+{
+  "name": "profil",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "fNmwm",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "20",
+      "storage": "1",
+      "varName2": "tag",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "22",
+      "storage": "1",
+      "varName2": "data-stworzenia-konta",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "24",
+      "storage": "1",
+      "varName2": "data-dolaczenia",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "18",
+      "storage": "1",
+      "varName2": "ilość-ról",
+      "name": "Store Member Info"
+    },
+    {
+      "sourceDate": "${tempVars(\"data-stworzenia-konta\")}",
+      "dateLanguage": "\"pl\"",
+      "modeStorage": "0",
+      "info": "1",
+      "buildInput": "",
+      "storage": "1",
+      "varName": "dzien-stworzenia-konta",
+      "name": "Store Date Info Plus"
+    },
+    {
+      "sourceDate": "${tempVars(\"data-stworzenia-konta\")}",
+      "dateLanguage": "\"pl\"",
+      "modeStorage": "0",
+      "info": "5",
+      "buildInput": "",
+      "storage": "1",
+      "varName": "miesiac-stworzenia-konta",
+      "name": "Store Date Info Plus"
+    },
+    {
+      "sourceDate": "${tempVars(\"data-stworzenia-konta\")}",
+      "dateLanguage": "\"pl\"",
+      "modeStorage": "0",
+      "info": "6",
+      "buildInput": "",
+      "storage": "1",
+      "varName": "rok-stworzenia-konta",
+      "name": "Store Date Info Plus"
+    },
+    {
+      "sourceDate": "${tempVars(\"data-stworzenia-konta\")}",
+      "dateLanguage": "\"pl\"",
+      "modeStorage": "0",
+      "info": "12",
+      "buildInput": "",
+      "storage": "1",
+      "varName": "dzien-stworzenia-konta-unix",
+      "name": "Store Date Info Plus"
+    },
+    {
+      "sourceDate": "${tempVars(\"data-dolaczenia\")}",
+      "dateLanguage": "\"pl\"",
+      "modeStorage": "0",
+      "info": "1",
+      "buildInput": "",
+      "storage": "1",
+      "varName": "dzien-dolaczenia",
+      "name": "Store Date Info Plus"
+    },
+    {
+      "sourceDate": "${tempVars(\"data-dolaczenia\")}",
+      "dateLanguage": "\"pl\"",
+      "modeStorage": "0",
+      "info": "5",
+      "buildInput": "",
+      "storage": "1",
+      "varName": "miesiac-dolaczenia",
+      "name": "Store Date Info Plus"
+    },
+    {
+      "sourceDate": "${tempVars(\"data-dolaczenia\")}",
+      "dateLanguage": "\"pl\"",
+      "modeStorage": "0",
+      "info": "6",
+      "buildInput": "",
+      "storage": "1",
+      "varName": "rok-dolaczenia",
+      "name": "Store Date Info Plus"
+    },
+    {
+      "sourceDate": "${tempVars(\"data-dolaczenia\")}",
+      "dateLanguage": "\"pl\"",
+      "modeStorage": "0",
+      "info": "12",
+      "buildInput": "",
+      "storage": "1",
+      "varName": "rok-dolaczenia-unix",
+      "name": "Store Date Info Plus"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "<:jin_member:923193836199628813> Informacje o użytkowniku!",
+          "url": "",
+          "color": "#5865f2",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"avatar\")}",
+          "description": "```\nPomyślnie wygenerowano informacje o użytkowniku.\n\nInformacje znajdziesz poniżej:\n```",
+          "fields": [
+            {
+              "name": "● Nazwa:",
+              "value": "${tempVars(\"name\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● Tag:",
+              "value": "#${tempVars(\"tag\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● ID:",
+              "value": "${tempVars(\"id\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● Ilość posiadanych ról:",
+              "value": "${tempVars(\"ilość-ról\")-1}",
+              "inline": "false"
+            },
+            {
+              "name": "● Data stworzenia konta:",
+              "value": "${tempVars(\"dzien-stworzenia-konta\")}.${tempVars(\"miesiac-stworzenia-konta\")}.${tempVars(\"rok-stworzenia-konta\")} (<t:${tempVars(\"dzien-stworzenia-konta-unix\")}:R>)",
+              "inline": "false"
+            },
+            {
+              "name": "● Data dołączenia na serwer:",
+              "value": "${tempVars(\"dzien-dolaczenia\")}.${tempVars(\"miesiac-dolaczenia\")}.${tempVars(\"rok-dolaczenia\")} (<t:${tempVars(\"rok-dolaczenia-unix\")}:R>)",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"name\")}#${tempVars(\"tag\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Pokazuje informacje o TWOIM profilu!"
+}
