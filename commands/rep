@@ -1,0 +1,210 @@
+{
+  "name": "rep",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "ldCXl",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "5",
+      "storage": "1",
+      "varName2": "server-icon",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "uzytkownik",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username-object",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "4",
+      "varName": "typ",
+      "branches": [
+        {
+          "comparison": "1",
+          "value": "Reputacja Pozytywna",
+          "actions": [
+            {
+              "member": "5",
+              "varName": "uzytkownik",
+              "dataName": "reputacjatak",
+              "changeType": "1",
+              "value": "1",
+              "name": "Control Member Data"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "",
+                  "url": "",
+                  "color": "#5864f2",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "```\nPoprawnie dodano reputację użytkownikowi ${tempVars(\"username-object\")}!\n```",
+                  "fields": [
+                    {
+                      "name": "Typ reputacji:",
+                      "value": "> ` ${slashParams(\"typ\")} `",
+                      "inline": "false"
+                    },
+                    {
+                      "name": "Treść reputacji:",
+                      "value": "> ` ${slashParams(\"powod\")} `",
+                      "inline": "false"
+                    }
+                  ],
+                  "author": "${tempVars(\"username\")}",
+                  "authorUrl": "",
+                  "authorIcon": "${tempVars(\"avatar\")}",
+                  "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+                  "footerIconUrl": "${tempVars(\"avatar\")}"
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "Reputacja Negatywna",
+          "actions": [
+            {
+              "member": "5",
+              "varName": "uzytkownik",
+              "dataName": "reputacjanie",
+              "changeType": "1",
+              "value": "1",
+              "name": "Control Member Data"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "",
+                  "url": "",
+                  "color": "#5864f2",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "```\nPoprawnie dodano reputację użytkownikowi ${tempVars(\"username-object\")}!\n```",
+                  "fields": [
+                    {
+                      "name": "Typ reputacji:",
+                      "value": "> ` ${slashParams(\"typ\")} `",
+                      "inline": "false"
+                    },
+                    {
+                      "name": "Treść reputacji:",
+                      "value": "> ` ${slashParams(\"powod\")} `",
+                      "inline": "false"
+                    }
+                  ],
+                  "author": "${tempVars(\"username\")}",
+                  "authorUrl": "",
+                  "authorIcon": "${tempVars(\"avatar\")}",
+                  "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+                  "footerIconUrl": "${tempVars(\"avatar\")}"
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        }
+      ],
+      "name": "Multi-Check Variable"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "typ",
+      "description": "Jaki typ reputacji chcesz dać użytkownikowi?",
+      "type": "STRING",
+      "required": true,
+      "choices": [
+        {
+          "name": "Reputacja Pozytywna",
+          "value": "Reputacja Pozytywna"
+        },
+        {
+          "name": "Reputacja Negatywna",
+          "value": "Reputacja Negatywna"
+        }
+      ]
+    },
+    {
+      "name": "uzytkownik",
+      "description": "Komu chcesz dać reputację?",
+      "type": "USER",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "powod",
+      "description": "Jaki jest powód nadania reputacji?",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Nadaj serwerową reputację!"
+}
