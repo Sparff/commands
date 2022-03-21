@@ -1,8 +1,8 @@
 # Wstęp
 Na samym początku chciałbym poinformować, iż wszystkie rawdaty znajdujące się w tym repozytorium są mojego autorstwa.
 
-Nazwa oraz Tag: `Sparf#0007`
-Identyfikator: `872066275873026048`
+Nazwa oraz Tag: `Sparf#0007`                                                                                                                      
+Identyfikator: `872066275873026048` 
 
 # RawDaty
 Każda z tych rawdat jest w 100% darmowa. Wystarczy wejść w wybrany przez siebie plik i wgrać ją do programu!
