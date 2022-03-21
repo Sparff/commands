@@ -1,0 +1,86 @@
+{
+  "name": "daily",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "kKQXu",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "dzienna-gotowka",
+      "min": "50",
+      "max": "2500",
+      "name": "Generate Random Number"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "bank",
+      "changeType": "1",
+      "value": "tempVars(\"dzienna-gotowka\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Beep, boop! Dobrzee!",
+          "url": "",
+          "color": "#5864f2",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "https://i.imgur.com/pk71B2c.png",
+          "description": "```\nPomyślnie odebrałeś swój dzienny przychód w wysokości ${tempVars(\"dzienna-gotowka\")} PLN!\n```",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Odbierz codzienną nagrodę!",
+  "_timeRestriction": 86400
+}
