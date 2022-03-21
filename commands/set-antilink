@@ -1,0 +1,157 @@
+{
+  "name": "antilink",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "DnSJS",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "4",
+      "varName": "typ",
+      "branches": [
+        {
+          "comparison": "1",
+          "value": "Włącz",
+          "actions": [
+            {
+              "server": "0",
+              "varName": "",
+              "dataName": "antilink",
+              "changeType": "0",
+              "value": "1",
+              "name": "Control Server Data"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "",
+                  "url": "",
+                  "color": "GREEN",
+                  "timestamp": "true",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "```\nPoprawnie WŁĄCZONO antilink!\n```",
+                  "fields": [],
+                  "author": "${tempVars(\"username\")}",
+                  "authorUrl": "",
+                  "authorIcon": "${tempVars(\"avatar\")}",
+                  "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+                  "footerIconUrl": "${tempVars(\"avatar\")}"
+                }
+              ],
+              "reply": true,
+              "ephemeral": true,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "Wyłącz",
+          "actions": [
+            {
+              "server": "0",
+              "varName": "",
+              "dataName": "antilink",
+              "changeType": "0",
+              "value": "0",
+              "name": "Control Server Data"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "",
+                  "url": "",
+                  "color": "GREEN",
+                  "timestamp": "true",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "```\nPoprawnie WYŁĄCZONO antilink!\n```",
+                  "fields": [],
+                  "author": "${tempVars(\"username\")}",
+                  "authorUrl": "",
+                  "authorIcon": "${tempVars(\"avatar\")}",
+                  "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+                  "footerIconUrl": "${tempVars(\"avatar\")}"
+                }
+              ],
+              "reply": true,
+              "ephemeral": true,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        }
+      ],
+      "name": "Multi-Check Variable"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "typ",
+      "description": "Co chcesz zrobić?",
+      "type": "STRING",
+      "required": true,
+      "choices": [
+        {
+          "name": "Włącz",
+          "value": "Włącz"
+        },
+        {
+          "name": "Wyłącz",
+          "value": "Wyłącz"
+        }
+      ]
+    }
+  ]
+}
