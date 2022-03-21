@@ -64,6 +64,8 @@ Jeżeli chciałbyś otrzymać RawDatę, której nie ma tutaj wejdź na serwer Di
 50. ● `Daily`,                                                                                                                                  
 51. ● `Del Rep`,                                                                                                                                  
 52. ● `Reps`,                                                                                                                                  
+53. ● `Invite Create`,                                                                                                                                  
+54. ● `Invite Delete`,                                                                                                                                  
                                                                                                                              
 # Wgrywanie rawdaty
 1. Stwórz nową komendę,                                                                                                                             
