@@ -8,7 +8,7 @@ Identyfikator: `872066275873026048`
 Każda z tych rawdat jest w 100% darmowa. Wystarczy wejść w wybrany przez siebie plik i wgrać ją do programu!
 
 # Płatne RawDaty
-Jeżeli chciałbyś otrzymać RawDatę, której nie ma tutaj wejdź na serwer Discord i stwórz ofertę. Na pewno się dogadamy!
+Jeżeli chciałbyś otrzymać RawDatę, której nie ma tutaj wejdź na serwer Discord i stwórz ofertę. Na pewno się dogadamy!                                                
 [Kliknij, aby przejść na serwer](https://discord.gg/XWNXhPnwW6)!
 
 # Spis Komend:
