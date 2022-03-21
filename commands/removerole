@@ -1,0 +1,181 @@
+{
+  "name": "removerole",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "sTWCF",
+  "actions": [
+    {
+      "comment": "INFO O UZYTKOWNIKU",
+      "color": "#9e0e0e",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id_username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "username_mention",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar_username",
+      "name": "Store Member Info"
+    },
+    {
+      "comment": "BRAK PERMISJI",
+      "color": "#9e0e0e",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "MANAGE_ROLES",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "10"
+      },
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "<:jin_zle:922394210773127198> Próba nie powiodła się!",
+          "url": "",
+          "color": "#ed4245",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"avatar_username\")}",
+          "description": "Niestety, nie posiadasz permisji do zarządzania rolami (`manage_roles`)!",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id_username\")})",
+          "footerIconUrl": "${tempVars(\"avatar_username\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "RESZTA AKCJI",
+      "color": "#9e0e0e",
+      "name": "Comment"
+    },
+    {
+      "member": "5",
+      "varName2": "uzytkownik",
+      "role": "6",
+      "varName": "rola",
+      "reason": "",
+      "name": "Remove Member Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "<:jin_zle:922394210773127198> Odebrano rolę!",
+          "url": "",
+          "color": "#ed4245",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"avatar_username\")}",
+          "description": "```\nRola została odebrana poprawnie.\n\nPoniżej znajdziesz dokładne informacje:\n```",
+          "fields": [
+            {
+              "name": "● Administrator:",
+              "value": "${member} ● ${tempVars(\"username\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● Użytkownik:",
+              "value": "${mentionedUser} ● ${tempVars(\"username_mention\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● Odebrana rola:",
+              "value": "${slashParams(\"rola\")}",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id_username\")})",
+          "footerIconUrl": "${tempVars(\"avatar_username\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "uzytkownik",
+      "description": "uzytkownik",
+      "type": "USER",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "rola",
+      "description": "rola",
+      "type": "ROLE",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Odbiera oznaczonemu użytkownikowi rolę!"
+}
