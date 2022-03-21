@@ -1,0 +1,186 @@
+{
+  "name": "addtimerole",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "LxFBu",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "uzytkownik",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id_mention",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "uzytkownik",
+      "info": "21",
+      "storage": "1",
+      "varName2": "username_mention",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName2": "uzytkownik",
+      "role": "6",
+      "varName": "rola",
+      "reason": "",
+      "name": "Add Member Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Sukces!",
+          "url": "",
+          "color": "#5864f2",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"avatar\")}",
+          "description": "```\nPomyślnie nadałeś rolę oznaczonemu użytkownikowi.\n\nPoniżej znajdziesz najważniejsze informacje!\n```",
+          "fields": [
+            {
+              "name": "● Administrator:",
+              "value": "${member} ● ${tempVars(\"username\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● Użytkownik:",
+              "value": "${slashParams(\"uzytkownik\")} ● `${tempVars(\"username_mention\")}`",
+              "inline": "false"
+            },
+            {
+              "name": "● Rola:",
+              "value": "${slashParams(\"rola\")}",
+              "inline": "false"
+            },
+            {
+              "name": "● Czas:",
+              "value": "${slashParams(\"czas\")} Sekund",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "${slashParams(\"czas\")}",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "member": "5",
+      "varName2": "uzytkownik",
+      "role": "6",
+      "varName": "rola",
+      "reason": "",
+      "name": "Remove Member Role"
+    },
+    {
+      "channel": "103",
+      "varName": "TUTAJ DAJ ID KANAŁU NA KTÓRYM BĘDĄ LOGI",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Beep, boop!",
+          "url": "",
+          "color": "#ed4245",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"avatar\")}",
+          "description": "```\nMINĄŁ CZAS! Pomyślnie odebrano rolę użytkownikowi ${tempVars(\"username_mention\")}!\n```",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"username\")} (${tempVars(\"id\")})",
+          "footerIconUrl": "${tempVars(\"avatar\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "czas",
+      "description": "Czas",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "uzytkownik",
+      "description": "Użytkownik",
+      "type": "USER",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "rola",
+      "description": "Rola",
+      "type": "ROLE",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Nadaje rolę na podany przez ciebie czas!"
+}
