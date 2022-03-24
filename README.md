@@ -85,7 +85,8 @@ zaktualizowana.
 
 # Ostatnia aktualizacja
 ### **Schemat:**
-`Data oraz Godzina - Nazwa komendy - Wprowadzone/zedytowane/usunięte rzeczy`
+`Data oraz Godzina - Nazwa komendy - Wprowadzone/zedytowane/usunięte rzeczy`                                                                                
+*W sekcji `Update'y` będą przedstawiane maksymalnie 3 aktualizacje*
 ### **Przykład:**
 ● `19.03.2022 / 21:33 - UserInfo - Wprowadzono datę utworzenia konta`,                                                                                                
 ● `19.03.2022 / 21:34 - ServerInfo - Zedytowano treść embed'a`,                                                                                                       
@@ -93,4 +94,4 @@ zaktualizowana.
 ● `...`
 
 ### Update'y:
-● `Brak informacji`
+● `24.03.2022 / 21:05 - Command does not exist - Zedytowano treść embed'a`,                                                                             
