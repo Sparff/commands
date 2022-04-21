@@ -79,6 +79,11 @@ Jeżeli chciałbyś otrzymać RawDatę, której nie ma tutaj wejdź na serwer Di
 65. ● `Edit Role`,                                                                                                                                            
 66. ● `Delete Role`,                                                                                                                                        
 67. ● `Clyde`,                                                                                                                                          
+
+# Spis API (Application Programming Interface):
+1. ● `Clyde`,                                                                                                                                             
+2. ● `Random Phone Number`,                                                                                                                               
+3. ● `Random Vehicle`,                                                                                                                                
                                                                                                                              
 # Wgrywanie rawdaty
 1. Stwórz nową komendę,                                                                                                                             
