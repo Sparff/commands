@@ -1,0 +1,107 @@
+{
+  "name": "global-user-unban",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "4",
+  "_id": "tolSj",
+  "actions": [
+    {
+      "comment": "<strong>SPRAWDZANIE CZY USER MA GBANA</strong>",
+      "color": "#ed4245",
+      "name": "Comment"
+    },
+    {
+      "member": "5",
+      "varName": "uzytkownik",
+      "dataName": "gban",
+      "comparison": "1",
+      "value": "100",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "5"
+      },
+      "name": "Check Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Ten użytkownik nie posiada globalnej blokady!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "<strong>USUWANIE GBANA</strong>",
+      "color": "#ed4245",
+      "name": "Comment"
+    },
+    {
+      "member": "5",
+      "varName": "uzytkownik",
+      "dataName": "gban",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Sukces!",
+          "url": "",
+          "color": "",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Poprawnie usunięto globalną blokadę użytkownikowi ${slashParams(\"uzytkownik\")}!",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "uzytkownik",
+      "description": "",
+      "type": "USER",
+      "required": true,
+      "choices": null
+    }
+  ]
+}
