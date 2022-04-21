@@ -69,6 +69,12 @@ Jeżeli chciałbyś otrzymać RawDatę, której nie ma tutaj wejdź na serwer Di
 55. ● `Start Streaming`,                                                                                                                                  
 56. ● `Stop Streaming`,                                                                                                                                  
 57. ● `Move Member`,                                                                                                                                  
+58. ● `Global Ban`,                                                                                                                                 
+59. ● `Global Unban`,                                                                                                                                               
+60. ● `Global Ban TEST komenda`,                                                                                                                      
+61. ● `Global Ban ID`,                                                                                                                            
+62. ● `Global Unban ID`,                                                                                                                                  
+63. ● `Global Ban TEST komenda`,                                                                                                                        
                                                                                                                              
 # Wgrywanie rawdaty
 1. Stwórz nową komendę,                                                                                                                             
