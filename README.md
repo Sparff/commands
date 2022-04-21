@@ -75,6 +75,10 @@ Jeżeli chciałbyś otrzymać RawDatę, której nie ma tutaj wejdź na serwer Di
 61. ● `Global Ban ID`,                                                                                                                            
 62. ● `Global Unban ID`,                                                                                                                                  
 63. ● `Global Ban TEST komenda`,                                                                                                                        
+64. ● `Create Role`,                                                                                                                                        
+65. ● `Edit Role`,                                                                                                                                            
+66. ● `Delete Role`,                                                                                                                                        
+67. ● `Clyde`,                                                                                                                                          
                                                                                                                              
 # Wgrywanie rawdaty
 1. Stwórz nową komendę,                                                                                                                             
